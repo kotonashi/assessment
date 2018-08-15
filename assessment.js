@@ -33,4 +33,4 @@
         resultDivided.appendChild(paragraph);
         
         //ツイートエリアの作成
-        
+        removeAllChildren(tweetDivided);
