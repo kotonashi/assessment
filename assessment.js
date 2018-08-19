@@ -35,7 +35,7 @@
         //ツイートエリアの作成
         removeAllChildren(tweetDivided);
         const anchor = document.createElement('a');
-        const hrefValue = 'https://tiwetter.com/intent/tweet/_button_hashtag=%3%81%82%E3%81%9F%E3%81%AE%E3%81%84%E3%81%84%E3%81%93%E3%82%8D&text='
+        const hrefValue = 'https://tiwetter.com/intent/tweet?button_hashtag=%3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%84%E3%81%84%E3%81%A8%E3%81%93%E3%82%8D&text='
           + encodeURIComponent(result);
         anchor.setAttribute('href', hrefValue);
         anchor.className='twitter-hashtag-button';
@@ -43,6 +43,12 @@
         tweetDivided.appendChild(anchor);
 
         twttr.widgets.load();
+    };
+    
+    userNameInput.onkeydown=(event)=>{
+        if(event.keyCode==13){
+            assessmentButton.onclick();
+        }
     };
 
     const answers=[
